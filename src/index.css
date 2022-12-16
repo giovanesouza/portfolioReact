@@ -1,13 +1,334 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  list-style: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-dark: #212529;
+  --color-light: #fff;
+  --color-secondary: #6C757D;
+  --color-success: #198754;
+  --color-danger: #DC3545;
+  --color-primary: #0D6EFD;
+  --color-warning: #FFC107;
+  --color-teste: #080137;
+
+}
+
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-dark);
+  color: var(--color-secondary);
+}
+
+
+.container {
+  max-width: 120rem;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #fff; */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: var(--color-dark);
+  z-index: 999;
+
+}
+
+header .container {
+
+  height: 6rem;
+  padding: 2rem;
+
+
+}
+
+/* Icon </> Logo e presentation*/
+.iconCode {
+  color: var(--color-warning);
+}
+
+header .logo a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  color: var(--color-secondary);
+  /* font-weight: 600; */
+  transition: .2s;
+}
+
+header .logo a:hover {
+  color: var(--color-warning);
+  border: 0;
+}
+
+
+nav,
+ul {
+  display: flex;
+  align-items: center;
+}
+
+/* ul {
+  display: none;
+} */
+
+/* MENU PARA DISPOSITIVOS MÓVEIS */
+nav .menuMobile {
+
+  display: none;
+
+  width: 4rem;
+  height: 4rem;
+
+  /* display: flex; */
+  flex-direction: column;
+  justify-content: space-around;
+
+  padding: 0.5rem;
+  cursor: pointer;
+
+  /* background-color: #198754; */
+}
+
+nav .menuMobile .menuLine {
+  width: 100%;
+  height: 0.3rem;
+  background-color: var(--color-secondary);
+
+  border-radius: 1rem;
+
+}
+
+nav .menuMobile:hover .menuLine {
+  background-color: var(--color-warning);
+}
+
+
+
+nav ul li a {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  padding: 1rem;
+
+  border-bottom: 0.1rem solid transparent;
+  /* border-radius: 0.5rem; */
+  transition: .2s;
+}
+
+nav ul li a:hover,
+a.active {
+  color: var(--color-warning);
+  border-bottom: 0.2rem solid var(--color-warning);
+
+}
+
+
+
+/* SEÇÃO HELLO */
+#hello {
+  background-color: #14171a;
+}
+
+
+#hello .helloPresentation {
+  width: 100%;
+  height: calc(100vh - 6rem);
+  margin-top: 6rem;
+
+  display: flex;
+}
+
+.helloPresentation .presentation,
+.helloPresentation .photo {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  /* padding: 0 2rem; */
+  padding-left: 2rem;
+}
+
+.presentation h1 {
+  color: var(--color-light);
+  font-size: 3.2rem;
+}
+
+.presentation span.name {
+  color: var(--color-warning);
+  font-size: 3.8rem;
+}
+
+  /* Mão acenando */
+.presentation img.wavingHand {
+  width: 8rem;
+  position: absolute;
+  margin-left: 20rem;
+  margin-top: -8rem;
+}
+
+
+.presentation .occupation {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+
+  font-size: 2rem;
+  color: var(--color-light);
+  border-top: 0.1rem solid var(--color-secondary);
+  border-bottom: 0.1rem solid var(--color-secondary);
+  padding: 0.5rem 0;
+}
+
+
+.helloPresentation .socialMedia {
+  margin-top: 1.6rem;
+  text-align: center;
+}
+
+.helloPresentation .socialMedia a {
+  color: var(--color-secondary);
+  font-size: 3rem;
+  margin-right: 1rem;
+}
+
+.helloPresentation .socialMedia a:hover {
+  color: var(--color-warning);
+
+}
+
+
+.helloPresentation .photo {
+  background-color: var(--color-light);
+  background-image: url('./pages/images/photo-presentation.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+
+  filter: opacity(0.5);
+}
+
+
+
+
+/* SEÇÃO SOBRE MIM */
+
+#aboutMe {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  padding: 0 2rem;
+  height: calc(100vh - 6rem);
+}
+
+.aboutMeContent {
+  text-align: center;
+  padding: 2rem;
+}
+
+.aboutMeContent h2,
+img {
+  margin-bottom: 3rem;
+}
+
+.aboutMeContent img {
+  width: 20rem;
+  height: 20rem;
+  filter: drop-shadow(0 0 1rem var(--color-dark));
+  /* border: 0.2rem solid var(--color-dark); */
+  border-radius: 50%;
+}
+
+
+.aboutMeContent .content {
+  text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+
+  ul {
+    display: none;
+  }
+
+  /* MENU PARA DISPOSITIVOS MÓVEIS */
+  nav .menuMobile {
+    display: flex;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  html {
+    font-size: 55%;
+  }
+
+  #hello .helloPresentation {
+    flex-direction: column;
+  }
+
+
+  .helloPresentation .presentation {
+    padding: 0;
+    align-items: center;
+  }
+
+  .presentation .occupation {
+    justify-content: center;
+    margin-top: 0.5rem;
+
+  }
+
+
+  /* Mão acenando */
+  .presentation img.wavingHand {
+    margin-left: 26rem;
+
+  }
+
+
+}
+
+
+@media (max-width: 425px) {
+
+  html {
+    font-size: 55%;
+  }
+
 }
