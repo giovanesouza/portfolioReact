@@ -16,7 +16,13 @@ export default function AboutMe() {
 
                     <div className="content">
 
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        <p className="text-center">Olá, me chamo <strong>Giovane Souza</strong> e sou <mark>Desenvolvedor FullStack</mark>.</p>
+
+                        <p className="text-center my-function">Minha função como desenvolvedor é <strong>resolver problemas de forma eficaz, a fim de garantir a satisfação do cliente</strong>.</p> <br/>
+
+                        <p className="start"> Iniciei os estudos na programação em maio de  2022 por meio da <a href="https://recodepro.org.br/" target="_blank">Recode Pro</a> - onde recebi a certificação FullStack - e, desde então, venho buscando conhecimentos complementares a fim de aprofundar-me nas tecnologias aprendidas ao longo da formação, objetivando, também, aprender novas linguagens.</p> <br/>
+
+                        <span  className="skills"> <strong>Principais competências</strong>:  Organização, Pontualidade e Determinação.</span>
 
 
                     </div>
